@@ -1,0 +1,143 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== BACKGROUND ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0a3d2, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== APP CONTAINER ===== */
+.app {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(84, 176, 230, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== TITLE ===== */
+h1 {
+  text-align: center;
+  color: rgb(241, 213, 120);
+  margin-bottom: 1rem;
+}
+
+/* ===== INPUT AREA ===== */
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  padding: 0.7rem 1rem;
+  border: none;
+  background: #eeb7e0;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ===== FILTER BUTTONS ===== */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  gap: 0.4rem;
+}
+
+.filters button {
+  flex: 1;
+  background: rgba(129, 203, 247, 0.7);
+  color: #111;
+}
+
+.filters .active {
+  background: #c0bee9;
+  color: white;
+}
+
+/* ===== TASK LIST ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  border-radius: 8px;
+  margin-bottom: 0.4rem;
+  background: rgba(255, 255, 255, 0.75);
+  transition: background 0.2s ease;
+}
+
+li:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+li span {
+  cursor: pointer;
+}
+
+/* ===== COMPLETED TASK ===== */
+li.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* ===== ACTION ICONS ===== */
+.actions button {
+  background: transparent;
+  color: #333;
+  font-size: 1rem;
+  padding: 0 0.3rem;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty {
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 500px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
